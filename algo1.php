@@ -1,10 +1,15 @@
 <?php
 
-$map = [
-    "Nom" => "ODelice",
-    "Adresse" => "93 rue de la pierre"
+$resto = [
+    "nom" => "ODelice",
+    "adresse" => [
+        "numero" => 93,
+        "voirie" => "rue de la pierre",
+        "code postal" => "60007",
+        "ville" => "lyon",
+        "pays" => "france"
+    ]
 ];
 
-foreach ($map as $key => $element){
-    echo $key. ": " .$element."\n";
-}
+echo "Le restaurant ". $resto["nom"] . " est stitué dans la ville de  " . $resto["adresse"]["ville"] . " en ". $resto["adresse"]["pays"];
+
